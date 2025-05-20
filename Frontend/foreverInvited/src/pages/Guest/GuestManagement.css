@@ -1,0 +1,126 @@
+/* GuestManagement.css */
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+form input {
+  padding: 10px;
+  min-width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+  color: #444;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table td button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+table td button:last-child {
+  margin-right: 0;
+}
+
+/* Button Variants */
+button.send-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+button.send-btn:hover {
+  background-color: #218838;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+button.update-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+button.update-btn:hover {
+  background-color: #e0a800;
+}
+
+button.save-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+button.save-btn:hover {
+  background-color: #138496;
+}

@@ -1,0 +1,104 @@
+/* Body and overall page styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light grey background */
+  margin: 0;
+  padding: 0;
+  display: flex;  /* Using flexbox to center the content */
+  justify-content: center;  /* Horizontally center */
+  align-items: center;  /* Vertically center */
+  height: 100vh;  /* Full viewport height */
+}
+
+/* Main registration form container */
+.registration-form {
+  width: 100%;
+  max-width: 480px;  /* Form width */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the form */
+  border: 1px solid #ddd;
+  box-sizing: border-box;  /* Ensure padding is within the container */
+}
+
+/* Form heading */
+.registration-form h2 {
+  font-size: 26px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Input fields (text, email, phone, password, etc.) */
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0; /* Space between fields */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fafafa; /* Light background for the input fields */
+  box-sizing: border-box; /* Ensures padding is inside the element */
+}
+
+/* For password field */
+.registration-form input[type="password"] {
+  font-family: "Courier New", monospace; /* To indicate it's a password field */
+}
+
+/* Button styling */
+.registration-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #000; /* Black background for the button */
+  color: #fff; /* White text */
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.registration-form button:hover {
+  background-color: #333; /* Darker black when hovering */
+}
+
+/* Error message styling */
+.error {
+  color: #d9534f; /* Red color for error messages */
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Select field (dropdown for role) styling */
+.registration-form select {
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+/* Responsive design: When screen width is smaller than 500px */
+@media (max-width: 500px) {
+  .registration-form {
+    padding: 20px; /* Less padding on small screens */
+  }
+
+  .registration-form h2 {
+    font-size: 20px; /* Slightly smaller heading */
+  }
+
+  .registration-form input,
+  .registration-form select {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .registration-form button {
+    font-size: 14px; /* Adjust font size for the button */
+  }
+}

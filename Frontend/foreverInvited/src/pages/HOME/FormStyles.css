@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Add animation for fadeIn effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Form Container */
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Logo Styling */
+.form-container .logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container .logo-container img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.form-container .logo-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Form Heading */
+.form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #510668;  /* Dark Purple */
+  animation: textPulse 3s infinite;
+}
+
+@keyframes textPulse {
+  0% {
+    color: #510668;
+  }
+  50% {
+    color: #ff69b4; /* Pink */
+  }
+  100% {
+    color: #510668;
+  }
+}
+
+/* Form Box for Fields */
+form {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+/* Focus Effect on Input Fields */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: #ff69b4;
+  outline: none;
+  background-color: #fff8f9;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Submit Button Styles (like view details button) */
+button[type="submit"] {
+  background: linear-gradient(45deg, #9d4edd, #ff69b4, #9d4edd, #ff69b4);
+  background-size: 300% 300%;
+  color: white;
+  font-size: 16px;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+  animation: gradientMove 3s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff69b4, #9d4edd, #ff69b4);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: gradientMove 3s ease infinite;
+  border-radius: 27px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(157, 78, 221, 0.5);
+  animation: gradientMove 1.5s ease infinite;
+}
+
+button[type="submit"]:hover::before {
+  animation: gradientMove 1.5s ease infinite;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #9d4edd;
+  text-decoration: none;
+  animation: linkHover 1.5s infinite;
+}
+
+@keyframes linkHover {
+  0%, 100% {
+    color: #9d4edd;
+  }
+  50% {
+    color: #ff69b4;
+  }
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  button[type="submit"],
+  select {
+    font-size: 14px;
+  }
+}

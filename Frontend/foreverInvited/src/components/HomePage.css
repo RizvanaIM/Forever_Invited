@@ -1,0 +1,378 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-purple: #510668;
+  --primary-pink: #ff69b4;
+  --secondary-purple: #9d4edd;
+  --text-dark: #333;
+  --text-light: #666;
+  --white: #fff;
+  --bg-light: #f4f7fc;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--bg-light);
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Main Content Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Welcome Card */
+.welcome-card {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.welcome-auth-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-auth-buttons .login-btn {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.welcome-auth-buttons .register-btn {
+  background: var(--primary-pink);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.welcome-auth-buttons .login-btn:hover {
+  background: var(--white);
+  color: var(--primary-purple);
+}
+
+.welcome-auth-buttons .register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+  background: var(--white);
+  color: var(--primary-purple);
+}
+
+.welcome-card h1 {
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.welcome-card .highlight {
+  color: var(--primary-pink);
+  font-weight: 700;
+  animation: textPulse 3s infinite;
+}
+
+@keyframes textPulse {
+  0% { color: var(--primary-pink); }
+  50% { color: var(--white); }
+  100% { color: var(--primary-pink); }
+}
+
+.cta-button {
+  background: linear-gradient(45deg, var(--primary-pink), var(--secondary-purple));
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  font-size: 0.9rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(157, 78, 221, 0.3);
+  background: linear-gradient(45deg, var(--secondary-purple), var(--primary-pink));
+}
+
+/* Services Card */
+.services-card {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: var(--bg-light);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+  color: var(--white);
+}
+
+.service-item i {
+  font-size: 1.2rem;
+  color: var(--primary-purple);
+  transition: color 0.3s ease;
+}
+
+.service-item:hover i {
+  color: var(--white);
+}
+
+/* Testimonials Card */
+.testimonials-card {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: var(--bg-light);
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+  color: var(--white);
+}
+
+.rating {
+  color: var(--primary-pink);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.testimonial:hover .rating {
+  color: var(--white);
+}
+
+.testimonial p {
+  color: var(--text-light);
+  font-style: italic;
+  margin: 0.4rem 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.testimonial:hover p {
+  color: var(--white);
+}
+
+.author {
+  color: var(--primary-purple);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.testimonial:hover .author {
+  color: var(--white);
+}
+
+/* About Card */
+.about-card {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.about-content p {
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Features Card */
+.features-card {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: var(--bg-light);
+  transition: all 0.3s ease;
+}
+
+.feature-item i {
+  font-size: 1.2rem;
+  color: var(--primary-purple);
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+  color: var(--white);
+}
+
+.feature-item:hover i {
+  color: var(--white);
+}
+
+/* Card Headers */
+.card h2 {
+  color: var(--primary-purple);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .welcome-card {
+    grid-column: 1 / -1;
+  }
+
+  .features-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .welcome-auth-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .welcome-auth-buttons .login-btn,
+  .welcome-auth-buttons .register-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-purple);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--text-light);
+}
