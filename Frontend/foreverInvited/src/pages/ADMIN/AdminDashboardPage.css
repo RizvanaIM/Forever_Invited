@@ -1,0 +1,133 @@
+/* Admin Dashboard Container */
+.admin-dashboard {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Table Styles */
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-dashboard th, .admin-dashboard td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.admin-dashboard th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #510668; /* Dark Purple */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Admin Dashboard Heading Styles */
+.admin-dashboard h1 {
+  font-size: 2.5rem;
+  font-family: 'Lato', sans-serif;
+  color: #9d4edd;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: textPulse 3s infinite;
+}
+
+@keyframes textPulse {
+  0% {
+    color: #9d4edd;
+  }
+  50% {
+    color: #ff69b4; /* Pink */
+  }
+  100% {
+    color: #9d4edd;
+  }
+}
+
+/* Button Styles */
+.admin-dashboard button {
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #9d4edd, #ff69b4);
+  background-size: 300% 300%;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+  animation: gradientMove 3s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-dashboard button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff69b4, #9d4edd, #ff69b4);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: gradientMove 3s ease infinite;
+  border-radius: 27px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.admin-dashboard button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(157, 78, 221, 0.5);
+  animation: gradientMove 1.5s ease infinite;
+}
+
+.admin-dashboard button:nth-child(2) {
+  background: linear-gradient(45deg, #dc3545, #ff6b6b);
+}
+
+.admin-dashboard button:nth-child(2):hover {
+  background: linear-gradient(45deg, #c82333, #ff3b3b);
+}
+
+/* Error message styling */
+.error {
+  color: #d9534f;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}

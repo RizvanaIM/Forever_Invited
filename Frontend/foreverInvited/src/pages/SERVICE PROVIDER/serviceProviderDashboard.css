@@ -1,0 +1,101 @@
+/* /src/pages/serviceprovider/serviceProviderDashboard.css */
+
+/* Body and overall page styling */
+.dashboard-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+  }
+  
+  /* Main container for the dashboard */
+  .dashboard-container {
+    width: 100%;
+    max-width: 600px; /* Form width */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the container */
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Ensure padding is within the container */
+  }
+  
+  /* Heading for the dashboard */
+  .dashboard-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 1s ease-out; /* Animation for the heading */
+  }
+  
+  /* Button styling */
+  .add-service-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #000; /* Black background for the button */
+    color: #fff; /* White text */
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  /* Button hover effect */
+  .add-service-button:hover {
+    background-color: #333; /* Darker black when hovering */
+    transform: scale(1.05); /* Slight grow effect */
+  }
+  
+  /* Card container for adding service */
+  .card-container {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Service info description */
+  .service-info p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Animation for the heading */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 500px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    .dashboard-heading {
+      font-size: 20px;
+    }
+  
+    .add-service-button {
+      font-size: 16px;
+    }
+  
+    .service-info p {
+      font-size: 14px;
+    }
+  }
+  
